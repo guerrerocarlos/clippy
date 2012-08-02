@@ -21,7 +21,7 @@ class Clippy {
     var label:TextField = new TextField();
     var format:TextFormat = new TextFormat("Arial", 10);
     
-    label.text = "copy to clipboard";
+    label.text = "Copiar";
     label.setTextFormat(format);
     label.textColor = 0x888888;
     label.selectable = false;
@@ -41,7 +41,7 @@ class Clippy {
     
     button.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) {
       flash.system.System.setClipboard(text);
-      label.text = "copied!";
+      label.text = "Copiado!";
       label.setTextFormat(format);
     });
     
@@ -51,7 +51,7 @@ class Clippy {
     
     button.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent) {
       label.visible = false;
-      label.text = "copy to clipboard";
+      label.text = "Copiar";
       label.setTextFormat(format);
     });
     
